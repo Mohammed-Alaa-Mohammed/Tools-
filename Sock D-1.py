@@ -3,19 +3,20 @@ import json
 import os
 from tqdm import tqdm
 import time
-import subprocess as sub
+from datetime import datetime
 from pystyle import *
 
 # إنشاء كائن Instaloader
 L = instaloader.Instaloader()
 
 # Logo of a Tool set one ...✓→⇲
-print ("""
+print("""
 \33[31;1m▄︻デ══━一💥\33[39;0m @Developer Mohammed Alaa   \33[32;1m▄︻デ══━ 一💥\33[39;0m
 \33[33;1m▄︻デ══━一💥\33[39;0m @Developer Mohammed Alaa   \33[34;1m▄︻デ══━ 一💥\33[39;0m
 \33[36;1m▄︻デ══━一💥\33[39;0m @Developer Mohammed Alaa   \33[35;1m▄︻デ══━ 一💥\33[39;0m
 \n\33[31;1m▄▄︻┻┳═══════════════════════════一 𖦏 💨💨💨\33[39;0m
 """)
+
 
 # عرض قائمة الخيارات للمستخدم
 def display_menu():
@@ -26,8 +27,10 @@ def display_menu():
     print("4 - Download all information (Profile Info, Picture, Posts)")
     print("0 - Exit\n")
 
-Write.Print("Developer ::| Mohammed Alaa Mohammed.\n",Colors.cyan_to_green,interval=.02)
-Write.Print("\nGithub ::| https://www.github.com/DARKGITHUBPRO/.\n\n",Colors.green_to_yellow,interval=.02)
+
+Write.Print("Developer ::| Mohammed Alaa Mohammed.\n", Colors.cyan_to_green, interval=.02)
+Write.Print("\nGithub ::| https://www.github.com/DARKGITHUBPRO/.\n\n", Colors.green_to_yellow, interval=.02)
+
 
 # اختيار المستخدم
 def user_choice():
@@ -41,10 +44,20 @@ def user_choice():
         except ValueError:
             print("\n\33[31;1mInvalid input, please enter a number.\33[39;0m")
 
+
 # عرض شريط التقدم
 def show_progress():
     for i in tqdm(range(100), "\33[0032;1mProcessing...\33[39m", unit="\33[36;1m steps\33[39;002m"):
-        time.sleep(0.360)
+        time.sleep(0.01)
+
+
+# تسجيل عملية التحميل في ملف نصي
+def log_download(action, username):
+    now = datetime.now()
+    timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+    with open("download_schedule_log.txt", "a") as log_file:
+        log_file.write(f"[{timestamp}] {action} for user: {username}\n")
+
 
 # تحميل المعلومات الشخصية
 def download_profile_info(username):
@@ -75,13 +88,19 @@ def download_profile_info(username):
     # حفظ المعلومات في ملف JSON
     with open(f"{username}_profile_info.json", "w", encoding='utf-8') as json_file:
         json.dump(profile_info, json_file, indent=4, ensure_ascii=False)
+
+    log_download("Profile information downloaded", username)
     print(f"\n\33[35;1mProfile information saved as {username}_profile_info.json\33[39;0m")
+
 
 # تحميل صورة الملف الشخصي
 def download_profile_pic(username):
     profile = instaloader.Profile.from_username(L.context, username)
     L.download_profile(username, profile_pic_only=True)
+
+    log_download("Profile picture downloaded", username)
     print(f"\n\33[36;1mProfile picture for {username} downloaded.\33[39;0m")
+
 
 # تحميل المنشورات الأخيرة
 def download_recent_posts(username):
@@ -95,7 +114,10 @@ def download_recent_posts(username):
             break
         L.download_post(post, target=posts_dir)
         count += 1
+
+    log_download("Recent posts downloaded", username)
     print(f"\n\33[36;1mLast 5 posts downloaded to {posts_dir}.\33[39;0m")
+
 
 # تحميل جميع المعلومات (المعلومات الشخصية + صورة الملف الشخصي + المنشورات)
 def download_all_info(username):
@@ -103,6 +125,7 @@ def download_all_info(username):
     download_profile_info(username)
     download_profile_pic(username)
     download_recent_posts(username)
+
 
 # الوظيفة الرئيسية
 def main():
@@ -128,12 +151,11 @@ def main():
             print("\n\33[31;1mExiting...\33[39;0m\n")
             break
 
+
 # تشغيل البرنامج
 if __name__ == "__main__":
     main()
 
 # developer ::| Mohammed Alaa Mohammed
-# V.3.3.3
+# V.4.0.0
 # name of tool ==:| Instagram Tool
-
-#sub.run(["pyinstaller"])
