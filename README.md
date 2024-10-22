@@ -11,7 +11,7 @@
 - ZPhiers.py
 -  ``` usage: ZPhiers.py [-h] [--use_digits] [--use_even_digits] [--use_odd_digits] [--use_symbols] [--use_letters] [--num_threads NUM_THREADS] file_path min_length max_length```
 - ```ZPhiers.py <path_to_file> <min_length> <max_length> --use_digits --use_even_digits --num_threads 4``` -
--  Note : *```Use This Tool Use of Windows or Linux only - devices strong... Only```*
+-  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
   ى
 
 
