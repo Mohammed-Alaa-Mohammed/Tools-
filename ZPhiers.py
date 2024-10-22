@@ -21,7 +21,7 @@ Write.Print ("""
                                                                                         [-] Created By : Mohammed Alaa Mohammed
                                                                                          ]
                                                                                          
-""",Colors.blue_to_cyan ,interval=.001)
+""",Colors.blue_to_cyan ,interval=.000000000000)
 Write.Print('\n[-] Message : It may take a while to fetch the password for Your file.\n', Colors.green_to_cyan, interval=0.030)
 Write.Print('\n[-] GitHub : https://www.github.com/DARKGITHUBPRO\n', Colors.red_to_yellow, interval=0.020)
 
@@ -65,13 +65,13 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_sy
             elif file_type == 'rar' and extract_rar(file_path, password):  # تجربة كلمة المرور على ملفات rar
                 print("Time taken:", time.time() - start_time, "seconds")
                 return
-    print("[❌]\33[31;1mPassword not found\33[39;0m")
+    print("\n[❌]\33[31;1mPassword not found\33[39;0m\n")
 
 # الدالة الرئيسية للبرنامج
 def main():
     file_path = input("\n[-] Enter the path of the file (e.g., C:/files/archive.zip): ")  # طلب إدخال مسار الملف من المستخدم
     if not os.path.isfile(file_path):
-        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
+        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m\n")
         return
 
     file_type = os.path.splitext(file_path)[1][1:].lower()  # استخراج نوع الملف من الامتداد
@@ -92,5 +92,5 @@ if __name__ == "__main__":
     main()
 
 
-# V.00.2.3v
+
 # by : Mohammed Alaa Mohammed [ developer ]
