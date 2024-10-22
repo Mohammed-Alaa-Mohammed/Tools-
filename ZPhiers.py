@@ -13,18 +13,12 @@ Write.Print ("""
    /  /    |  |     |      /      /  /_\  \  |  |     |    <   |  | |  . `  | |  | |_ | 
   /  /----.|  `----.|  |\  \----./  _____  \ |  `----.|  .  \  |  | |  |\   | |  |__| | 
  /________| \______|| _| `._____/__/     \__\ \______||__|\__\ |__| |__| \__|  \______|   
-                                                                                         INFO.. [
-                                                                                         
-                                                                                        ✮ V0.1.2.3v
-                                                                                        ✮ Follower : 12 Follower
-                                                                                        ✮ Followers : 25 Followers
-                                                                                        ✮ Likes : 10 Linkes
-                                                                                        ✮ Views : 98
-                                                                                        ✮ Downloads or Useed Tool.. : 40 Done 
-                                                                                        ✮ Tools : 15 .T
-                                                                                        ✮ Versions of This Tool : 0 .T.v
-                                                                                        ✮ Created By : Mohammed Alaa Mohammed
-                                                                                         
+                                                                                        INFO.. [
+                                                                                        ✮✮ V0.2.2.3v          Follower 12
+                                                                                        ✮✮ Followers : 45     Likes : 88 
+                                                                                        ✮✮ Views : 109         Downloads or Useed Tool.. : 45 Done 
+                                                                                        ✮✮ Tools : 15         Versions of This Tool : 3 .T.v
+                                                                                        [-] Created By : Mohammed Alaa Mohammed
                                                                                          ]
                                                                                          
 """,Colors.blue_to_cyan ,interval=.001)
@@ -71,18 +65,18 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_sy
             elif file_type == 'rar' and extract_rar(file_path, password):  # تجربة كلمة المرور على ملفات rar
                 print("Time taken:", time.time() - start_time, "seconds")
                 return
-    print("\33[31;1mPassword not found\33[39;0m")
+    print("[❌]\33[31;1mPassword not found\33[39;0m")
 
 # الدالة الرئيسية للبرنامج
 def main():
     file_path = input("\n[-] Enter the path of the file (e.g., C:/files/archive.zip): ")  # طلب إدخال مسار الملف من المستخدم
     if not os.path.isfile(file_path):
-        print("\n[-]\33[36;1m File does not exist. Please enter a valid file path.\33[39;0m")
+        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
         return
 
     file_type = os.path.splitext(file_path)[1][1:].lower()  # استخراج نوع الملف من الامتداد
     if file_type not in ['zip', 'rar']:
-        print("\33[31;1m[-] Unsupported file type. Please enter a zip or rar file.\33[39;0m")
+        print("\33[31;1m[❌] Unsupported file type. Please enter a zip or rar file.\33[39;0m")
         return
 
     min_length = int(input("\n[-] Enter the minimum length of the password: "))  # طلب إدخال الحد الأدنى لطول كلمة المرور
