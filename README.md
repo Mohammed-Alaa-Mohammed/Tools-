@@ -3,7 +3,7 @@ All Tools Created By Developer : Mohammed Alaa Mohammed and a Tools Use Python L
 
 * run this tool ZPhiers.py look at for this
 
-* syntax
+# syntax
 قعej
 قعrrr
 - ZPhiers.py
