@@ -23,7 +23,7 @@ Write.Print("""
                                                                                         ✮✮ Last Update : 2024 - 10 - 22
                                                                                         [-] Created By : Mohammed Alaa Mohammed
                                                                                          ]
-""", Colors.blue_to_cyan, interval=.001)
+""", Colors.blue_to_white, interval=.001)
 
 Write.Print('\n[-] Message : It may take a while to fetch the password for Your file.\n', Colors.green_to_cyan,
             interval=0.030)
