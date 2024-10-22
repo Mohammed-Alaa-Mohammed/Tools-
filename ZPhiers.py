@@ -5,8 +5,6 @@ import itertools
 import string
 import time
 import threading
-import argparse
-import py7zr
 from pystyle import *
 
 Write.Print("""
@@ -16,18 +14,20 @@ Write.Print("""
    /  /    |  |     |      /      /  /_\  \  |  |     |    <   |  | |  . `  | |  | |_ | 
   /  /----.|  `----.|  |\  \----./  _____  \ |  `----.|  .  \  |  | |  |\   | |  |__| | 
  /________| \______|| _| `._____/__/     \__\ \______||__|\__\ |__| |__| \__|  \______|                                                                                          
-  INFO.. [
-                                                                                            ✮✮ V0.3.3.4v          Follower 12
+
+                                                                                        INFO.. [
+                                                                                            ✮✮ V0.2.3.4v          Follower 12
                                                                                             ✮✮ Followers : 45     Likes : 90
                                                                                             ✮✮ Views : 109         Downloads or Useed Tool.. : 45 Done
                                                                                             ✮✮ Tools : 17         Versions of This Tool : 6 .T.v
                                                                                             ✮✮ Update Of : 2024 / 10 / 22
-                                                                                            ✮✮ Last Update : 2024 / 10 / 22 of V0.3.3.4
+                                                                                            ✮✮ Last Update : 2024 / 10 / 22 of V0.2.3.4
                                                                                             [-] Created By : Mohammed Alaa Mohammed
                                                                                                 ]
-""", Colors.blue_to_cyan, interval=.001)
+""", Colors.blue_to_white, interval=.001)
 
-Write.Print('\n[-] Message : It may take a while to fetch the password for Your file.\n', Colors.green_to_cyan, interval=0.030)
+Write.Print('\n[-] Message : It may take a while to fetch the password for Your file.\n', Colors.green_to_cyan,
+            interval=0.030)
 Write.Print('\n[-] GitHub : https://www.github.com/DARKGITHUBPRO\n', Colors.red_to_yellow, interval=0.020)
 
 
@@ -51,14 +51,16 @@ def extract_rar(file_path, password):
         return False
 
 
-# دالة لفك ضغط ملفات 7z باستخدام كلمة المرور
-def extract_7z(file_path, password):
-    try:
-        with py7zr.SevenZipFile(file_path, mode='r', password=password) as z:
-            z.extractall()  # محاولة استخراج الملفات باستخدام كلمة المرور
-        return True
-    except Exception as e:
+# دالة لفحص الملف المضغوط
+def check_file(file_path):
+    if not os.path.isfile(file_path):
+        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
         return False
+    file_type = os.path.splitext(file_path)[1][1:].lower()
+    if file_type not in ['zip', 'rar']:
+        print("[❌]\33[31;1m Unsupported file type. Please enter a zip or rar file.\33[39;0m")
+        return False
+    return True
 
 
 # دالة لتنفيذ هجوم القاموس باستخدام الخيوط
@@ -76,6 +78,10 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
     if use_letters:
         chars += string.ascii_letters
 
+    # إضافة الأرقام من 12345678 إلى قائمة كلمات المرور
+    predefined_passwords = ['12345678',"24681214",'1234567','f721n023','12341234','00001111','11110000','gtp65be','20406090']  # إضافة كلمات المرور المعروفة
+    # print ('\nWait For Start...\n')
+
     attempts = 0
     start_time = time.time()
     password_found = [False]  # لمشاركة الحالة بين الخيوط
@@ -86,19 +92,30 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
             if password_found[0]:
                 return
             attempts += 1
-            print(f"\33[33;1m[-] Trying password:\33[39;0m {password} (Attempt: {attempts})")
+            current_time = time.time() - start_time
+            print(f"\33[33;1m[-] Trying password:\33[39;0m {password} (Attempt: {attempts}, Time: {current_time:.2f}s)")
             if file_type == 'zip' and extract_zip(file_path, password):
                 print("Password found:", password)
                 password_found[0] = True
                 return
             elif file_type == 'rar' and extract_rar(file_path, password):
-                print("Password found:", password)
+                print("\33[32;1mPassword found:\33[39;0m", password)
                 password_found[0] = True
                 return
-            elif file_type == '7z' and extract_7z(file_path, password):
-                print("Password found:", password)
-                password_found[0] = True
-                return
+
+    # تجربة كلمات المرور المحددة أولاً
+    for password in predefined_passwords:
+        attempts += 1
+        current_time = time.time() - start_time
+        print(f"\n\33[33;1m[-] Trying predefined password:\33[39;0m {password} (Attempt: {attempts}, Time: {current_time:.2f}s)")
+        if file_type == 'zip' and extract_zip(file_path, password):
+            print("\nPassword found:", password)
+            print(f"\nPassword found in {time.time() - start_time:.2f} seconds.")
+            return
+        elif file_type == 'rar' and extract_rar(file_path, password):
+            print("\n\33[32;1mPassword found:\33[39;0m", password)
+            print(f"\n\33[32;1mPassword found in {time.time() - start_time:.2f} seconds.")
+            return
 
     # تقسيم كلمات المرور إلى أجزاء على حسب عدد الخيوط
     all_passwords = [''.join(p) for length in range(min_length, max_length + 1) for p in
@@ -118,51 +135,42 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
 
     end_time = time.time()
     if password_found[0]:
-        print(f"Password found in {end_time - start_time} seconds.")
+        print(f"\33[32;1mPassword found in {end_time - start_time:.2f} seconds.")
     else:
-        print("[❌] Password not found.")
+        print("[❌]\33[31;1m Password not found.\33[39;0m")
     print(f"Total attempts: {attempts}")
 
     # تصدير النتائج إلى ملف نصي
     with open("brute_force_results.txt", "w") as f:
         f.write(f"File: {file_path}\n")
-        f.write(f"Time taken: {end_time - start_time} seconds\n")
+        f.write(f"Time taken: {end_time - start_time:.2f} seconds\n")
         f.write(f"Total attempts: {attempts}\n")
         f.write(f"Password found: {'Yes' if password_found[0] else 'No'}\n")
 
 
 # الدالة الرئيسية للبرنامج
 def main():
-    parser = argparse.ArgumentParser(description="Brute force password recovery for zip, rar, and 7z files.")
-    parser.add_argument("file_path", help="Path to the encrypted file.")
-    parser.add_argument("min_length", type=int, help="Minimum length of the password.")
-    parser.add_argument("max_length", type=int, help="Maximum length of the password.")
-    parser.add_argument("--use_digits", action="store_true", help="Use all digits.")
-    parser.add_argument("--use_even_digits", action="store_true", help="Use even digits only.")
-    parser.add_argument("--use_odd_digits", action="store_true", help="Use odd digits only.")
-    parser.add_argument("--use_symbols", action="store_true", help="Use symbols.")
-    parser.add_argument("--use_letters", action="store_true", help="Use letters.")
-    parser.add_argument("--num_threads", type=int, default=4, help="Number of threads to use.")
+    file_path = input("\n[-] Enter the path of the file (e.g., C:/files/archive.zip): ")  # طلب إدخال مسار الملف من المستخدم
 
-    args = parser.parse_args()
-
-    if not os.path.isfile(args.file_path):
-        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
+    # فحص الملف
+    if not check_file(file_path):
         return
 
-    file_type = os.path.splitext(args.file_path)[1][1:].lower()  # استخراج نوع الملف من الامتداد
-    if file_type not in ['zip', 'rar', '7z']:
-        print("\33[31;1m[❌] Unsupported file type. Please enter a zip, rar, or 7z file.\33[39;0m")
-        return
+    file_type = os.path.splitext(file_path)[1][1:].lower()  # استخراج نوع الملف من الامتداد
 
-    brute_force(args.file_path, file_type, args.min_length, args.max_length, args.use_digits,
-                args.use_even_digits, args.use_odd_digits, args.use_symbols, args.use_letters, args.num_threads)
+    min_length = int(input("\n[-] Enter the minimum length of the password: "))  # طلب إدخال الحد الأدنى لطول كلمة المرور
+    max_length = int(input("\n[-] Enter the maximum length of the password: "))  # طلب إدخال الحد الأقصى لطول كلمة المرور
+    use_digits = input("\n[-] Use all digits? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام كاملة
+    use_even_digits = input("\n[-] Use even digits only? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام الزوجية
+    use_odd_digits = input("\n[-] Use odd digits only? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام الفردية
+    use_symbols = input("\n[-] Use symbols? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الرموز
+    use_letters = input("\n[-] Use letters? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأحرف
+    num_threads = int(input("\n[-] Enter number of threads to use (e.g., 4): "))  # إدخال عدد الخيوط
+
+    brute_force(file_path, file_type, min_length, max_length, use_digits, use_even_digits, use_odd_digits, use_symbols,
+                use_letters, num_threads)
 
 
 if __name__ == "__main__":
     main()
-
-# python brute_force.py <path_to_file> <min_length> <max_length> --use_digits --use_even_digits --num_threads 4
-
-# v.3.4.5T
-# Mohammed Alaa Mohammed
+    exit()
