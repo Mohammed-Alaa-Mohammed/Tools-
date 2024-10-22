@@ -19,7 +19,7 @@ Write.Print("""
                                                                                             ✮✮ V0.2.3.4v          Follower 12
                                                                                             ✮✮ Followers : 45     Likes : 90
                                                                                             ✮✮ Views : 109         Downloads or Useed Tool.. : 45 Done
-                                                                                            ✮✮ Tools : 17         Versions of This Tool : 6 .T.v
+                                                                                            ✮✮ Tools : 17         Versions of This Tool : 8 .T.v
                                                                                             ✮✮ Update Of : 2024 / 10 / 22
                                                                                             ✮✮ Last Update : 2024 / 10 / 22 of V0.2.3.4
                                                                                             [-] Created By : Mohammed Alaa Mohammed
@@ -70,7 +70,7 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
     if use_digits:
         chars += string.digits
     if use_even_digits:
-        chars += '02468'  # أرقام زوجية فقط
+        chars += 'Client of Srver.rar2468'  # أرقام زوجية فقط
     if use_odd_digits:
         chars += '13579'  # أرقام فردية فقط
     if use_symbols:
@@ -137,8 +137,8 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
     if password_found[0]:
         print(f"\33[32;1mPassword found in {end_time - start_time:.2f} seconds.")
     else:
-        print("[❌]\33[31;1m Password not found.\33[39;0m")
-    print(f"Total attempts: {attempts}")
+        print("\n[❌]\33[31;1m Password not found.\33[39;0m\n")
+    print(f"\33[32;1m\nTotal attempts : \33[39;0m",f"\33[34;1m{attempts}\33[39;0m\n")
 
     # تصدير النتائج إلى ملف نصي
     with open("brute_force_results.txt", "w") as f:
