@@ -15,14 +15,15 @@ Write.Print("""
   /  /----.|  `----.|  |\  \----./  _____  \ |  `----.|  .  \  |  | |  |\   | |  |__| | 
  /________| \______|| _| `._____/__/     \__\ \______||__|\__\ |__| |__| \__|  \______|                                                                                          
 
-                                                                                INFO.. [
-                                                                                        ✮✮ V0.2.3.3v          Follower 12
-                                                                                        ✮✮ Followers : 45     Likes : 205 
-                                                                                        ✮✮ Views : 115         Downloads or Useed Tool.. : 86 Done 
-                                                                                        ✮✮ Tools : 15         Versions of This Tool : 6 .T.v
-                                                                                        ✮✮ Last Update : 2024 - 10 - 22
-                                                                                        [-] Created By : Mohammed Alaa Mohammed
-                                                                                         ]
+                                                                                        INFO.. [
+                                                                                            ✮✮ V0.3.3.4v          Follower 12
+                                                                                            ✮✮ Followers : 45     Likes : 90
+                                                                                            ✮✮ Views : 109         Downloads or Useed Tool.. : 45 Done
+                                                                                            ✮✮ Tools : 17         Versions of This Tool : 6 .T.v
+                                                                                            ✮✮ Update Of : 2024 / 10 / 22
+                                                                                            ✮✮ Last Update : 2024 / 10 / 22 of V0.3.3.4
+                                                                                            [-] Created By : Mohammed Alaa Mohammed
+                                                                                                ]
 """, Colors.blue_to_white, interval=.001)
 
 Write.Print('\n[-] Message : It may take a while to fetch the password for Your file.\n', Colors.green_to_cyan,
@@ -50,6 +51,18 @@ def extract_rar(file_path, password):
         return False
 
 
+# دالة لفحص الملف المضغوط
+def check_file(file_path):
+    if not os.path.isfile(file_path):
+        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
+        return False
+    file_type = os.path.splitext(file_path)[1][1:].lower()
+    if file_type not in ['zip', 'rar']:
+        print("[❌]\33[31;1m Unsupported file type. Please enter a zip or rar file.\33[39;0m")
+        return False
+    return True
+
+
 # دالة لتنفيذ هجوم القاموس باستخدام الخيوط
 def brute_force(file_path, file_type, min_length, max_length, use_digits, use_even_digits, use_odd_digits, use_symbols,
                 use_letters, num_threads):
@@ -57,16 +70,17 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
     if use_digits:
         chars += string.digits
     if use_even_digits:
-        chars += '2468121416'  # أرقام زوجية فقط
+        chars += '02468'  # أرقام زوجية فقط
     if use_odd_digits:
-        chars += '12345678910'  # أرقام فردية فقط
+        chars += '13579'  # أرقام فردية فقط
     if use_symbols:
         chars += string.punctuation
     if use_letters:
         chars += string.ascii_letters
 
     # إضافة الأرقام من 12345678 إلى قائمة كلمات المرور
-    predefined_passwords = ['12345678']  # إضافة كلمات المرور المعروفة
+    predefined_passwords = ['12345678',"24681214",'1234567','f721n023','12341234','00001111','11110000','gtp65be','20406090']  # إضافة كلمات المرور المعروفة
+    # print ('\nWait For Start...\n')
 
     attempts = 0
     start_time = time.time()
@@ -78,27 +92,29 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
             if password_found[0]:
                 return
             attempts += 1
-            print(f"\n\33[33;1m[-] Trying password:\33[39;0m {password} (Attempt: {attempts})")
+            current_time = time.time() - start_time
+            print(f"\33[33;1m[-] Trying password:\33[39;0m {password} (Attempt: {attempts}, Time: {current_time:.2f}s)")
             if file_type == 'zip' and extract_zip(file_path, password):
-                print("\nPassword found:", password)
+                print("Password found:", password)
                 password_found[0] = True
                 return
             elif file_type == 'rar' and extract_rar(file_path, password):
-                print("\nPassword found:", password)
+                print("\33[32;1mPassword found:\33[39;0m", password)
                 password_found[0] = True
                 return
 
     # تجربة كلمات المرور المحددة أولاً
     for password in predefined_passwords:
         attempts += 1
-        print(f"\n\33[33;1m[-] Trying predefined password:\33[39;0m {password} (Attempt: {attempts})")
+        current_time = time.time() - start_time
+        print(f"\n\33[33;1m[-] Trying predefined password:\33[39;0m {password} (Attempt: {attempts}, Time: {current_time:.2f}s)")
         if file_type == 'zip' and extract_zip(file_path, password):
             print("\nPassword found:", password)
-            print(f"\nPassword found in {time.time() - start_time} seconds.")
+            print(f"\nPassword found in {time.time() - start_time:.2f} seconds.")
             return
         elif file_type == 'rar' and extract_rar(file_path, password):
-            print("\nPassword found:", password)
-            print(f"\nPassword found in {time.time() - start_time} seconds.")
+            print("\n\33[32;1mPassword found:\33[39;0m", password)
+            print(f"\n\33[32;1mPassword found in {time.time() - start_time:.2f} seconds.")
             return
 
     # تقسيم كلمات المرور إلى أجزاء على حسب عدد الخيوط
@@ -119,36 +135,31 @@ def brute_force(file_path, file_type, min_length, max_length, use_digits, use_ev
 
     end_time = time.time()
     if password_found[0]:
-        print(f"\nPassword found in {end_time - start_time} seconds.")
+        print(f"\33[32;1mPassword found in {end_time - start_time:.2f} seconds.")
     else:
-        print("\n[❌] Password not found.")
-    print(f"\nTotal attempts: {attempts}")
+        print("[❌]\33[31;1m Password not found.\33[39;0m")
+    print(f"Total attempts: {attempts}")
 
     # تصدير النتائج إلى ملف نصي
     with open("brute_force_results.txt", "w") as f:
         f.write(f"File: {file_path}\n")
-        f.write(f"Time taken: {end_time - start_time} seconds\n")
+        f.write(f"Time taken: {end_time - start_time:.2f} seconds\n")
         f.write(f"Total attempts: {attempts}\n")
         f.write(f"Password found: {'Yes' if password_found[0] else 'No'}\n")
 
 
 # الدالة الرئيسية للبرنامج
 def main():
-    file_path = input(
-        "\n[-] Enter the path of the file (e.g., C:/files/archive.zip): ")  # طلب إدخال مسار الملف من المستخدم
-    if not os.path.isfile(file_path):
-        print("\n[❌]\33[31;1m File does not exist. Please enter a valid file path.\33[39;0m")
+    file_path = input("\n[-] Enter the path of the file (e.g., C:/files/archive.zip): ")  # طلب إدخال مسار الملف من المستخدم
+
+    # فحص الملف
+    if not check_file(file_path):
         return
 
     file_type = os.path.splitext(file_path)[1][1:].lower()  # استخراج نوع الملف من الامتداد
-    if file_type not in ['zip', 'rar']:
-        print("\n\33[31;1m[❌] Unsupported file type. Please enter a zip or rar file.\33[39;0m")
-        return
 
-    min_length = int(
-        input("\n[-] Enter the minimum length of the password: "))  # طلب إدخال الحد الأدنى لطول كلمة المرور
-    max_length = int(
-        input("\n[-] Enter the maximum length of the password: "))  # طلب إدخال الحد الأقصى لطول كلمة المرور
+    min_length = int(input("\n[-] Enter the minimum length of the password: "))  # طلب إدخال الحد الأدنى لطول كلمة المرور
+    max_length = int(input("\n[-] Enter the maximum length of the password: "))  # طلب إدخال الحد الأقصى لطول كلمة المرور
     use_digits = input("\n[-] Use all digits? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام كاملة
     use_even_digits = input("\n[-] Use even digits only? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام الزوجية
     use_odd_digits = input("\n[-] Use odd digits only? (y/n): ").lower() == 'y'  # طلب إدخال استخدام الأرقام الفردية
@@ -162,5 +173,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-# Last Update
-# Mohammed Alaa 
+    exit()
+# v.3.4.5T
+# Mohammed Alaa Mohammed
