@@ -9,7 +9,7 @@
 
 * run this tool *"ZPhiers.py"* look at for this
 - ZPhiers.py
-- ZPhiers.py <path_to_file> <min_length> <max_length> --use_digits --use_even_digits --num_threads 4
+- ```ZPhiers.py <path_to_file> <min_length> <max_length> --use_digits --use_even_digits --num_threads 4```
 
 
-```**@DARKGITHUBPRO**```
+```@DARKGITHUBPRO```
