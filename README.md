@@ -14,7 +14,7 @@
 - ZPhiers.py
 
 - # Important...
-- 
+  
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
  
 
