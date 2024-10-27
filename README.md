@@ -6,7 +6,9 @@
 
 
 
-# Syntax Fot Run Tools write a ```python 'file_name.py'```
+# Syntax Fot Run Tools write a 
+
+- ```python 'file_name.py'```
 
 * run this tool *"ZPhiers.py"* look at for this
 - ZPhiers.py
@@ -16,6 +18,6 @@
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
  
 
-- PAROT TOOL : [run] > {python file_python_name.py} > ```PAROT.py```
+- PAROT TOOL : [run] > __python file_python_name.py__ > ```PAROT.py```
   
  ```@DARKGITHUBPRO``` > **Mohammed Alaa Mohammed**
