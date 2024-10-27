@@ -21,5 +21,9 @@
 - PAROT TOOL : [run] > _--python file_python_name.py--_ > ```PAROT.py```
   
  ```@DARKGITHUBPRO``` > **Mohammed Alaa Mohammed**
- 
- ![Screenshot 2024-10-22 195131](https://github.com/user-attachments/assets/c4fa2928-2bcb-4cc4-9f85-060ed5671fcf)
+
+ __PAROT Tool Preview__
+ ![Screenshot 2024-10-27 231318](https://github.com/user-attachments/assets/eb0de50b-316e-4eb6-a576-b4ff5471b411)
+
+![Screenshot 2024-10-27 231223](https://github.com/user-attachments/assets/ad05658b-4782-435b-af2b-cbfb9946643f)
+
