@@ -22,7 +22,10 @@
   
  ```@DARKGITHUBPRO``` > **Mohammed Alaa Mohammed**
 
+
  __PAROT Tool Preview__
+
+
  ![Screenshot 2024-10-27 231318](https://github.com/user-attachments/assets/eb0de50b-316e-4eb6-a576-b4ff5471b411)
 
 ![Screenshot 2024-10-27 231223](https://github.com/user-attachments/assets/ad05658b-4782-435b-af2b-cbfb9946643f)
