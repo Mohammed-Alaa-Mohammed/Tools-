@@ -12,7 +12,7 @@ def Login_user ():
     while True :
         PASSWORD = input ("\n\33[32;1mEnter Password Of This Tool : \33[39;0m")
         if PASSWORD == 'GITHUB.TOOLS_dev_123_321.scripts':
-            for i in tqdm(range(100), "\33[0032;1mProcessing...\33[39m", unit="\33[36;1m wait\33[39;002m"):
+            for i in tqdm(range(100), "\33[32;1mProcessing...\33[39m", unit="\33[36;1m wait\33[39;0m"):
                 time.sleep(0.1)
             os.system('cls')
             break
@@ -34,7 +34,7 @@ print("""
  ___    __    ___   ___  _____     _____  ___   ___   _        
 | |_)  / /\  | |_) / / \  | |       | |  / / \ / / \ | |       
 |_|   /_/--\ |_| \ \_\_/  |_|       |_|  \_\_/ \_\_/ |_|__     
-                                                          🆅.𝟑.𝟑.𝟒⁴ Last Update
+                                                          🆅.𝟑.𝟑.𝟒⁴ 𝙇𝙖𝙨𝙩 𝙐𝙥𝙙𝙖𝙩𝙚
                                                     
 \33[39;0m
 """"")
