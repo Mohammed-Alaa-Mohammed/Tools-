@@ -18,6 +18,6 @@
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
  
 
-- PAROT TOOL : [run] > __python file_python_name.py__ > ```PAROT.py```
+- PAROT TOOL : [run] > _--python file_python_name.py--_ > ```PAROT.py```
   
  ```@DARKGITHUBPRO``` > **Mohammed Alaa Mohammed**
