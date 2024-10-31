@@ -157,6 +157,10 @@ def log_error(vuln_type, url, error):
 Write.Print("[🚨❗🚨] Don't Use >| https , Use example: (http://www.google.com)", Colors.yellow, interval=.0)
 print("\n" + "﹌" * 20)
 website_url = input("[🌐]\33[92;1m URL \33[39;0m: ⋙⋙⋙⋙┆ ")
+if website_url == '':
+    print ("\n\33[91;1mTry...again return Run Code...")
+    exit()
+print ("﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌")
 print("﹌" * 20)
 scan_website(website_url)
 
