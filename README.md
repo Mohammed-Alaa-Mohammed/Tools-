@@ -30,3 +30,12 @@
 
 ![Screenshot 2024-10-27 231223](https://github.com/user-attachments/assets/ad05658b-4782-435b-af2b-cbfb9946643f)
 
+# 2024 - 10 - 31 Oct
+
+- New Tool of Name Tools Name and Versoin Website Scanner for Vulnerabilities , V.4
+
+- run : write python Filename.py
+  
+![Screenshot 2024-10-31 110605](https://github.com/user-attachments/assets/5c422b46-8f36-421e-b7b5-c554e23539d8)
+![Screenshot 2024-10-31 110640](https://github.com/user-attachments/assets/dd48bd1d-31fc-4934-a64d-6c2199f885ce)
+
