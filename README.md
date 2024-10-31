@@ -37,5 +37,6 @@
 - run : write python Filename.py
   
 ![Screenshot 2024-10-31 110605](https://github.com/user-attachments/assets/5c422b46-8f36-421e-b7b5-c554e23539d8)
-![Screenshot 2024-10-31 110640](https://github.com/user-attachments/assets/dd48bd1d-31fc-4934-a64d-6c2199f885ce)
+![Screenshot 2024-10-31 110640](https://github.com/user-attachments/assets/0e73e369-760f-47a8-9d0e-a40c1f759157)
+
 
