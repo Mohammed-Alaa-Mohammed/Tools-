@@ -9,7 +9,7 @@
 # from colorama import Fore
 # import random
 # Banner of logo project
-from future.backports.datetime import datetime
+
 
 # Installer Library for start tool
 # checking....
@@ -25,6 +25,7 @@ try:
     from tqdm import *
     from colorama import Fore
     import random
+    import datetime
 
 except ModuleNotFoundError:
     os.system('pip install pyfiglet')
@@ -45,7 +46,7 @@ print(Fore.LIGHTGREEN_EX,"""
                 .---------------.
                 | [-] Generate |
                 '---------------'       
-"""+'\33[94;1m\t [-] By : Developer Mohammed Alaa Mohammed\33[39;0m\n'+'\33[8;4m[-] V.1.02.4 is Last Update at \33[39;0m',f"\33[33;2m[-] {datetime.now()}\33[39;0m\n")
+"""+'\33[94;1m\t [-] By : Developer Mohammed Alaa Mohammed\33[39;0m\n'+'\33[8;4m[-] V.1.02.4 is Last Update at \33[39;0m',f"\33[33;2m[-] {datetime.datetime.now()}\33[39;0m\n")
 
 
 print("""
