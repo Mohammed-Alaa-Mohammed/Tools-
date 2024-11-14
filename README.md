@@ -20,11 +20,11 @@ git clone https://github.com/DARKGITHUBPRO/Tools-
 
 **2. Change Mode :**
 ```
-chmod +x * && ls
+chmod +x *
 ```
-**3. Run File as py :**
+**3.To show All File in Tool :**
 ```
-python PAROT.py
+ls
 ```
 
 
