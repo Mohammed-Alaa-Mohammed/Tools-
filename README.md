@@ -14,13 +14,18 @@
 ## /////////////////////
 
 **1. Installation Tool of Termux  - Kali Linux :**
-```git clone https://github.com/DARKGITHUBPRO/Tools-
+```
+git clone https://github.com/DARKGITHUBPRO/Tools-
 ```
 
 **2. Change Mode :**
-```chmod +x * && ls```
+```
+chmod +x * && ls
+```
 **3. Run File as py :**
-```python PAROT.py```
+```
+python PAROT.py
+```
 
 
  __PAROT Tool Preview__
