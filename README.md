@@ -11,7 +11,7 @@
   
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
 
-## /////////////////////
+<p> End </p>
 
 **1. Installation Tool of Termux  - Kali Linux :**
 ```
@@ -22,7 +22,7 @@ git clone https://github.com/DARKGITHUBPRO/Tools-
 ```
 chmod +x *
 ```
-**3.To show All File in Tool :**
+**3. To show All File in Tool :**
 ```
 ls
 ```
