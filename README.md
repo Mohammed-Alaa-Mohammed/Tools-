@@ -11,10 +11,11 @@
   
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
 
-#/////////////////////
+## /////////////////////
 
 **1. Installation Tool of Termux  - Kali Linux :**
-```git clone https://github.com/DARKGITHUBPRO/Tools-```
+```git clone https://github.com/DARKGITHUBPRO/Tools-
+```
 
 **2. Change Mode :**
 ```chmod +x * && ls```
