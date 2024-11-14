@@ -11,7 +11,7 @@
   
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
 
-<h1> End </1>
+###///////////////////////////////////////////////
 
 **1. Installation Tool of Termux  - Kali Linux :**
 ```
