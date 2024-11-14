@@ -18,18 +18,23 @@
 -  Note : **```Use This Tool Use of Windows or Linux only - devices strong... Only```**
  
 
-- PAROT TOOL : [run] 
+1. Installation Tool of Termux  - Kali Linux :
 ```
-bash
-python file_python_name.py--_ > ```PAROT.py
-bash
+git clone https://github.com/DARKGITHUBPRO/Tools-
+
 ```
-  
- ```@DARKGITHUBPRO``` > **Mohammed Alaa Mohammed**
+ 2. Change Mode :
+```
+chmod +x * && ls
+```
+3. Run File as py : 
+```
+python PAROT.py
+```
 
 
  __PAROT Tool Preview__
-
+ Not Found Now 
 
 
 
@@ -37,5 +42,4 @@ bash
 
 - New Tool of Name Tools Name and Versoin Website Scanner for Vulnerabilities , V.4
 
-- run : write python Filename.py
   
