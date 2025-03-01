@@ -1,4 +1,4 @@
-- All Tools Created By Developer : Mohammed Alaa Mohammed and a Tools Use Python Lang
+![image](https://github.com/user-attachments/assets/a4f8a18d-8cb0-4b83-9460-4925d91a8fda)- All Tools Created By Developer : Mohammed Alaa Mohammed and a Tools Use Python Lang
 
 ### Syntax For Run Tools write a
 
@@ -40,3 +40,6 @@ ls
 - New Tool of Name Tools Name and Versoin Website Scanner for Vulnerabilities , V.4
 
   
+# NEW Tool :  ```Block Black Tool```
+- Preview 
+![Screenshot 2025-03-01 105531](https://github.com/user-attachments/assets/657c155f-911e-4aba-9cb2-f2e95dfe170e)
