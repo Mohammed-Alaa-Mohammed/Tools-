@@ -42,9 +42,5 @@ ls
 
 - Date : ```2025 / 3 / 4```
 
-<b><pre class="FG-1"> Hi , Platforms : Linux - MacOs - Kali Linux - Windows || All Tools Developeing Use : Python Language</pre></b>
-<style>
-FG-1{
- font-size:15px;
-}
-</style>
+<b><pre style:"font-size:15px;"> Hi , Platforms : Linux - MacOs - Kali Linux - Windows || All Tools Developeing Use : Python Language</pre></b>
+
