@@ -40,8 +40,8 @@ ls
 - **Written By Developer : M.A.M.I**
 - Image :
 
+<h3> Not Found </h3>
 
--- ![Screenshot 2025-03-02 170557](https://github.com/user-attachments/assets/2b22dc40-8cf0-4e33-b859-94b3b658c83d)
 
 - Date : ```2025 / 3 / 4```
 
@@ -49,4 +49,4 @@ ls
 
 ```
 
-_**Platforms : Linux - MacOs - Kali Linux - Windows**_ || ```All Tools Developeing Use : Python Language```
+<code>**Platforms : Linux - MacOs - Kali Linux - Windows**</code>_ || ```All Tools Developeing Use : Python Language```
