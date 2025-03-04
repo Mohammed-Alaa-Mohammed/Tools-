@@ -42,5 +42,5 @@ ls
 
 - Date : ```2025 / 3 / 4```
 
-<b><pre style="font-size:15px;"> Hi , Platforms : Linux - MacOs - Kali Linux - Windows || All Tools Developeing Use : Python Language</pre></b>
+<b><pre style="font-size:150px;"> Hi , Platforms : Linux - MacOs - Kali Linux - Windows || All Tools Developeing Use : Python Language</pre></b>
 
