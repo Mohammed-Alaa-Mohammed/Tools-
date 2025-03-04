@@ -38,13 +38,10 @@ ls
 - Preview
 ```
 - **Written By Developer : M.A.M.I**
-- Image :
-
-<h3> Not Found </h3>
-
+- Image : <h3> Not Found </h3>
 
 - Date : ```2025 / 3 / 4```
 
-<cite> Hi </cite>
+<add> Hi </add>
 
 <code>**Platforms : Linux - MacOs - Kali Linux - Windows**</code>_ || ```All Tools Developeing Use : Python Language```
