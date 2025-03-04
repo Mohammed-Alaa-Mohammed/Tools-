@@ -38,7 +38,7 @@ ls
 - Preview
 ```
 - **Written By Developer : M.A.M.I**
-- Image :<h3>Not Found </h3>
+- Image :<h6 style="color:red;">Not Found</h6>
 
 - Date : ```2025 / 3 / 4```
 
