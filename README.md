@@ -33,17 +33,20 @@ ls
 ![Screenshot 2025-03-01 105531](https://github.com/user-attachments/assets/657c155f-911e-4aba-9cb2-f2e95dfe170e)
 
 
-# Last Tool : ```Informations-All```
+# Last Tool : ```Informations-All``` - Simple Version
 ```shell
 - Preview
 ```
 - **Written By Developer : M.A.M.I**
 - Image :
+
+
 -- ![Screenshot 2025-03-02 170557](https://github.com/user-attachments/assets/2b22dc40-8cf0-4e33-b859-94b3b658c83d)
+
 - Date : ```2025 / 3 / 4```
 
 ```text
 
 ```
 
-[**Platforms : Linux - MacOs - Kali Linux - Windows**] || ```All Tools Developeing Use : Python Language```
+_**Platforms : Linux - MacOs - Kali Linux - Windows**_ || ```All Tools Developeing Use : Python Language```
