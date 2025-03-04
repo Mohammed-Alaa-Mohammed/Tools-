@@ -45,8 +45,6 @@ ls
 
 - Date : ```2025 / 3 / 4```
 
-```text
-
-```
+<cite> Hi </cite>
 
 <code>**Platforms : Linux - MacOs - Kali Linux - Windows**</code>_ || ```All Tools Developeing Use : Python Language```
