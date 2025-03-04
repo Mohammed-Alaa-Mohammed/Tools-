@@ -38,11 +38,12 @@ ls
 - Preview
 ```
 - **Written By Developer : M.A.M.I**
-- Image :![Screenshot 2025-03-02 170557](https://github.com/user-attachments/assets/2b22dc40-8cf0-4e33-b859-94b3b658c83d)
+- Image :
+-- ![Screenshot 2025-03-02 170557](https://github.com/user-attachments/assets/2b22dc40-8cf0-4e33-b859-94b3b658c83d)
 - Date : ```2025 / 3 / 4```
 
-```
--- All Tools Developeing Use : Python Language
+```text
+All Tools Developeing Use : Python Language
 ```
 
-``~Platforms : Linux - MacOs - Kali Linux - Windows~``
+`Platforms : Linux - MacOs - Kali Linux - Windows~`
