@@ -42,6 +42,4 @@ ls
 
 - Date : ```2025 / 3 / 4```
 
-<pre> Hi </pre>
-
-<code>**Platforms : Linux - MacOs - Kali Linux - Windows**</code>_ || ```All Tools Developeing Use : Python Language```
+<pre> Hi , <code>**Platforms : Linux - MacOs - Kali Linux - Windows**</code>_ || ```All Tools Developeing Use : Python Language```</pre>
