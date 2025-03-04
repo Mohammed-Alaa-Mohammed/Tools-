@@ -38,8 +38,7 @@ ls
 - Preview
 ```
 - **Written By Developer : M.A.M.I**
-- Image :<h6 style="color:red;">Not Found</h6>
-
+- Image :<h5 style="color:red; font-size:50px;">Not Found</h5>
 - Date : ```2025 / 3 / 4```
 
 <b><pre style="font-size:150px;"> Hi , Platforms : Linux - MacOs - Kali Linux - Windows || All Tools Developeing Use : Python Language</pre></b>
