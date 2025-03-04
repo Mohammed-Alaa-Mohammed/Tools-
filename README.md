@@ -43,7 +43,7 @@ ls
 - Date : ```2025 / 3 / 4```
 
 ```text
-All Tools Developeing Use : Python Language
+
 ```
 
-`Platforms : Linux - MacOs - Kali Linux - Windows~`
+[**Platforms : Linux - MacOs - Kali Linux - Windows**] || ```All Tools Developeing Use : Python Language```
